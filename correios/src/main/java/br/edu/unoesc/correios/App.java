@@ -26,9 +26,14 @@ public class App {
 
         AtendeCliente correios = serviceCorreios.getPort(AtendeCliente.class);
 
-        EnderecoERP endereco = correios.consultaCEP("89663000");
+        EnderecoERP endereco = correios.consultaCEP("13520000");
 
-        System.out.println(endereco.getCidade());
+        System.out.println("");
+        System.out.println("----Web Service Correios----");
+        System.out.println("");
+        System.out.println("UF: " + endereco.getUf());
+        System.out.println("Bairro: " + endereco.getBairro());
+        System.out.println("Cidade: " + endereco.getCidade());
 
     }
 }
